@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle — VSCodeLib</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:400" rel="stylesheet"/>
+</head><body>
+<div class="container">
+  <div class="back"><a href="index.html">← Quay lại trang chủ</a></div>
+  <header><h1>Toggle</h1></header>
+
+  <nav>
+    <a href="booting.html">Booting</a>
+    <a href="window.html">Window</a>
+    <a href="toggle.html">Toggle</a>
+    <a href="slider.html">Slider</a>
+    <a href="dropdown.html">Dropdown</a>
+  </nav>
+
+  <section>
+    <h2>Tab:CreateToggle(options)</h2>
+    <p>Tạo một nút bật/tắt có thể lưu trạng thái.</p>
+
+    <pre><code>local Toggle = Tab:CreateToggle({
+    Name = "Speed Hack",
+    CurrentValue = false,
+    Flag = "SpeedHack",            -- Bắt buộc nếu dùng lưu config
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value and 100 or 16
+    end
+})</code></pre>
+
+    <h2>Bảng tham số</h2>
+    <table>
+      <tr><th>Tham số</th><th>Kiểu</th><th>Mô tả</th><th>Bắt buộc</th></tr>
+      <tr><td>Name</td><td>string</td><td>Tên hiển thị của toggle</td><td>Yes</td></tr>
+      <tr><td>CurrentValue</td><td>boolean</td><td>Giá trị mặc định (true/false)</td><td>No (default false)</td></tr>
+      <tr><td>Flag</td><td>string</td><td>Tên để lưu config (phải duy nhất)</td><td>Yes nếu bật ConfigurationSaving</td></tr>
+      <tr><td>Callback</td><td>function</td><td>Hàm chạy khi thay đổi giá trị</td><td>Yes</td></tr>
+    </table>
+
+    <div class="tip">
+      <strong>Lưu ý:</strong> Nếu bạn bật ConfigurationSaving trong CreateWindow, mọi toggle có Flag sẽ tự động lưu & load lại khi vào game.
+    </div>
+  </section>
+
+  <footer>VSCodeLib © 2025</footer>
+</div>
+</body></html>
