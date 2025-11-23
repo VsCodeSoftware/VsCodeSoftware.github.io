@@ -1,25 +1,91 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VSCodeLib — Roblox Library</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:400" rel="stylesheet"/>
-</head><body>
-<div class="container">
-  <header><h1>VSCode Library Docs</h1><p style="font-size:1.4rem;color:var(--gray);margin-top:12px;">Thư viện UI hiện đại cho Roblox script hub</p></header>
-  
-  <nav>
-    <a href="booting.html">Booting</a>
-    <a href="window.html">Window & Notify</a>
-    <a href="toggle.html">Toggle</a>
-    <a href="slider.html">Slider</a>
-    <a href="dropdown.html">Dropdown</a>
-  </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VSCodeLib — Documentation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>VSCodeLib</h1>
+      <p style="font-size:1.4rem;color:var(--text-secondary);margin-top:12px;">
+        Modern Roblox UI Library — Clean, Fast, Powerful
+      </p>
+    </header>
 
-  <section>
-    <h2>Setup Library</h2>
-    <pre><code>local VSCodeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/TÊNBẠN/vscode-lib/main/lib.lua"))()</code></pre>
-  </section>
+    <nav>
+      <a href="#booting">Booting</a>
+      <a href="#window">Window</a>
+      <a href="#toggle">Toggle</a>
+      <a href="#slider">Slider</a>
+      <a href="#dropdown">Dropdown</a>
+    </nav>
 
-  <footer>VSCode Lib © 2025 — <a href="https://github.com/VsCodeSoftwave/vscode-lib">GitHub</a></footer>
-</div>
-</body></html>
+    <!-- BOOTING -->
+    <section id="booting">
+      <h2>Booting the Library</h2>
+      <div class="method">
+        <div class="signature">local VSCodeLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/YourName/vscode-lib/main/lib.lua"))()</div>
+        <p>Loads the latest version of VSCodeLib from GitHub.</p>
+      </div>
+    </section>
+
+    <!-- TOGGLE EXAMPLE -->
+    <section id="toggle">
+      <h2>Tab:CreateToggle</h2>
+      <div class="method">
+        <h3>Tab:CreateToggle(options) → Toggle</h3>
+        <div class="signature">Toggle Tab:CreateToggle(table options)</div>
+        <p>Creates a toggle button with optional configuration saving.</p>
+
+        <h3>Arguments</h3>
+        <table class="args">
+          <tr><th>Index</th><th>Argument</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          <tr><td>1</td><td>Name</td><td>string</td><td>—</td><td>Display name of the toggle</td></tr>
+          <tr><td>2</td><td>CurrentValue</td><td>boolean</td><td>false</td><td>Initial state</td></tr>
+          <tr><td>3</td><td>Flag</td><td>string</td><td>nil</td><td>Unique identifier for config saving</td></tr>
+          <tr><td>4</td><td>Callback</td><td>function</td><td>—</td><td>Function called when toggled</td></tr>
+        </table>
+
+        <div class="example">
+          <h3>Example</h3>
+          <pre><code>-- You will provide this later</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDER EXAMPLE (copy cấu trúc này cho các phần khác) -->
+    <section id="slider">
+      <h2>Tab:CreateSlider</h2>
+      <div class="method">0
+        <h3>Tab:CreateSlider(options) → Slider</h3>
+        <div class="signature">Slider Tab:CreateSlider(table options)</div>
+        <p>Creates a customizable slider with min/max values.</p>
+
+        <h3>Arguments</h3>
+        <table class="args">
+          <tr><th>Index</th><th>Argument</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          <tr><td>1</td><td>Name</td><td>string</td><td>—</td><td>Name shown on the slider</td></tr>
+          <tr><td>2</td><td>Min</td><td>number</td><td>0</td><td>Minimum value</td></tr>
+          <tr><td>3</td><td>Max</td><td>number</td><td>100</td><td>Maximum value</td></tr>
+          <tr><td>4</td><td>Increment</td><td>number</td><td>1</td><td>Step size</td></tr>
+          <tr><td>5</td><td>CurrentValue</td><td>number</td><td>Min</td><td>Starting value</td></tr>
+          <tr><td>6</td><td>Flag</td><td>string</td><td>nil</td><td>Save key</td></tr>
+          <tr><td>7</td><td>Callback</td><td>function</td><td>—</td><td>Called on change</td></tr>
+        </table>
+
+        <div class="example">
+          <h3>Example</h3>
+          <pre><code>-- Example coming soon...</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      VSCodeLib © 2025 • Made with love for the Roblox community
+    </footer>
+  </div>
+</body>
+</html>
