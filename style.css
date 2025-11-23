@@ -1,0 +1,7 @@
+pre code {
+    color: #2c3e50;
+}
+pre code .keyword { color: #8e44ad; font-weight: bold; }
+pre code .string { color: #27ae60; }
+pre code .comment { color: #7f8c8d; font-style: italic; }
+pre code .number { color: #e67e22; }
