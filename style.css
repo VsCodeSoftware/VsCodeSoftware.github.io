@@ -1,7 +1,36 @@
-pre code {
-    color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#0d1117;--surface:#161b22;--text:#f0f6fc;--muted:#8b949e;
+  --border:#30363d;--accent:#58a6ff;--purple:#a855f7;--green:#3fb950;
 }
-pre code .keyword { color: #8e44ad; font-weight: bold; }
-pre code .string { color: #27ae60; }
-pre code .comment { color: #7f8c8d; font-style: italic; }
-pre code .number { color: #e67e22; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;}
+.container{max-width:960px;margin:0 auto;padding:40px 20px;}
+header{text-align:center;padding:60px 0 40px;}
+h1{font-size:3.2rem;background:linear-gradient(90deg,#58a6ff,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;}
+h2{font-size:2rem;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:12px;margin:60px 0 30px;}
+h3{font-size:1.5rem;margin:40px 0 20px;color:#e6edf3;}
+.method{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin:35px 0;}
+.signature{background:#21262d;padding:14px 18px;border-radius:8px;font-family:'JetBrains Mono',monospace;color:var(--purple);font-size:1rem;border-left:4px solid var(--purple);margin-bottom:20px;}
+table.args{width:100%;border-collapse:collapse;margin:25px 0;background:var(--surface);border-radius:8px;overflow:hidden;}
+table.args th{background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;}
+table.args th,table.args td{padding:14px;border-bottom:1px solid var(--border);text-align:left;}
+table.args tr:last-child td{border:none;}
+pre{background:#21262d;padding:20px;border-radius:10px;border:1px solid var(--border);overflow-x:auto;margin:30px 0;}
+code{font-family:'JetBrains Mono',monospace;font-size:0.94rem;color:#f0f6fc;}
+
+/* Nút Previous / Next */
+.nav-buttons{
+  display:flex;justify-content:space-between;margin:80px 0 40px;
+  padding:20px 0;border-top:1px solid var(--border);
+}
+.nav-btn{
+  padding:12px 24px;background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;color:var(--text);text-decoration:none;font-weight:500;
+  transition:all .2s;
+}
+.nav-btn:hover{background:var(--border);transform:translateY(-2px);}
+.nav-btn.disabled{opacity:0.4;pointer-events:none;color:var(--muted);}
+
+footer{text-align:center;padding:60px 0;color:var(--muted);font-size:0.9rem;}
